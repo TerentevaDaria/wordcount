@@ -16,6 +16,9 @@ uint64_t WordCounter(const std::string& filename) {
         }
         previous_char = current_char;
     }
+    if (!std::isspace(previous_char)) {
+        ++word_count;
+    }
 
     file.close();
 
