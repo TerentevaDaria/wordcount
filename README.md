@@ -16,4 +16,5 @@ _WordCount.exe filename1 filename2_
 
 _WordCount.exe --words filename1_
 
-
+### Файлы, которые можно использовать для запуска
+* example.txt
