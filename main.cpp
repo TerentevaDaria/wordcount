@@ -12,12 +12,12 @@ uint64_t WordCounter(const std::string& filename) {
 
     for (current_char = file.get(); file.good(); current_char = file.get()) {
         if (std::isspace(current_char) && !std::isspace(previous_char)) {
-            ++word_count;
+            word_count++;
         }
         previous_char = current_char;
     }
     if (!std::isspace(previous_char)) {
-        ++word_count;
+        word_count++;
     }
 
     file.close();
@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     std::vector <std::string> filenames;
     bool words_arg = false;
 
-    for (int i = 1; i < argc; ++i) {
+    for (int i = 1; i < argc; i++) {
         std::string arg = argv[i];
         if (arg[0] == '-') {
             if (arg == "-w" || arg == "--words") {
